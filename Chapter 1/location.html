@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <!--<script src="location.js"></script> -->  
+        <script>
+            window.onload = function(){
+                document.getElementById('buttom').addEventListener('click', respond);
+            }
+            window.onclick = function(){
+                alert('oohhhh...')
+            }
+            function respond (e){
+                alert('Boo!');
+            }
+        </script>  
+    </head>
+    <body>
+        <h1>Texty text</h1>
+        <button id="buttom">Hey</button>
+    </body>
+</html>

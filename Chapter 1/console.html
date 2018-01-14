@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <!--<script src="location.js"></script> -->  
+        <script>
+            var clicks = 0;
+            window.onload = function(){
+                console.log('Hello there!');
+                document.getElementById('buttom').addEventListener('click', respond)
+            }
+            function respond(e){
+                clicks++;
+                console.log('You did something:' + clicks)
+            }
+        </script>  
+    </head>
+    <body>
+        <button id="buttom">Hi</button>
+    </body>
+</html>

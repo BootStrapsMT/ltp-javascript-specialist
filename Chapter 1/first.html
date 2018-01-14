@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <style>
+            #touchTarget{
+                background-color:crimson;
+                color: aliceblue;
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                document.getElementById('touchTarget').addEventListener('click', respond);
+            }
+            
+            function respond(e){
+                //alert("Hello!");
+                document.getElementById('touchTarget').style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="touchTarget"><p>Touch me!</p></div>
+    </body>
+</html>

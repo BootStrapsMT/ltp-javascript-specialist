@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){
+                document.getElementById('content').addEventListener('click', respond);
+                document.getElementById('one').addEventListener('click', respondOne);
+                document.getElementById('two').addEventListener('click', respondTwo);
+            }
+            function respond(e){
+                console.log("Content");
+                document.getElementById('content').style.color = "green";
+            }
+            function respondOne(e){
+                console.log("one");
+            }
+            function respondTwo(e){
+                console.log("two");
+            }
+        </script>  
+    </head>
+    <body>
+        <div id="content">
+            <p id="one">Aenean accumsan tortor tellus</p>
+            <p id="two">interdum orci, eget rutrum </p>
+        </div>
+    </body>
+</html>
