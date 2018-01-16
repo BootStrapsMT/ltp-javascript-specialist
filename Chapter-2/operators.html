@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){                
+                var oper1 = 1236; 
+                var oper2 = 856.4; 
+                var oper3 = 15;
+                var out = "";
+                
+                out += "Addition: " + (oper1 + oper2);
+                out += "<br/>Subtraction: " + (oper1 - oper2);
+                out += "<br/>Multplication: " + (oper1 * oper2);
+                out += "<br/>Divsion: " + (oper1 / oper2);
+                
+                out += "<br/>Mod: " + (8 % 3);
+                out += "<br/>Even: " + (8 % 2);
+                out += "<br/>Odd: " + (9 % 2);
+                out += "<br/>++: " + (++oper3);
+                out += "<br/>--: " + (--oper3);
+                out += "<br/>+=3 " + (oper3 += 3);
+                out += "<br/>-=3 " + (oper3 -= 3);
+                out += "<br/>*=3 " + (oper3 *= 3);
+                
+
+                document.getElementById("result").innerHTML = out;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

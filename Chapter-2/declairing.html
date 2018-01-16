@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            var berrys;  //public or script scope
+            
+            window.onload =function(){
+                var score; //Decolaration
+                score = 1000; // Initialize
+                
+                berrys = 8; // Combined //scop only in side this funucation
+                out()
+                //document.getElementById('result').innerHTML = "Berry count: " + berrys;
+            }
+            
+            function out(){
+               document.getElementById('result').innerHTML = "Berry count: " + berrys; 
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>
