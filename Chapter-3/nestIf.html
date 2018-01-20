@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                document.getElementById('showGrade').addEventListener('click', grade);
+    
+                function grade(e){
+                    var LG;
+                    var valueFromInput = document.getElementById('getValue').value;
+                    console.log(valueFromInput);
+                    //console.log(mg2);
+                    //alert("Hello");
+                    if(valueFromInput >0 && valueFromInput < 101){
+                                            if(valueFromInput >= 90){
+                        LG ="A";  
+                        } else if (valueFromInput >= 80){
+                            LG ="B";  
+                        } else if (valueFromInput >= 70){
+                            LG ="C";  
+                        } else if(valueFromInput >= 60){
+                            LG ="D";  
+                        } else {
+                            LG = "F"
+                        }
+
+                        document.getElementById('result').innerHTML = ("Grade: " + LG);     
+                    } else {
+                        document.getElementById('result').innerHTML = ("Enter a munder from 0 - 100.");
+                    }
+              
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <label for="getValue">Grade</label>
+        <input type="number" min="0" max="100" id="getValue" />
+        <button id="showGrade">Show Grade</button>
+        <div id="result"></div>
+    </body>
+</html>

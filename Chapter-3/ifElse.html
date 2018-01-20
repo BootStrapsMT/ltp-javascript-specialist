@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                var age = 19;
+                var citzen = true;
+                
+                if(age >= 20 && citzen){
+                  document.getElementById('result').innerHTML = ("Vote Here!");   
+                } else {
+                  document.getElementById('result').innerHTML = ("Take a hike!")     
+                }
+                
+                document.getElementById('one').addEventListener('click',hi);
+                document.getElementById('two').addEventListener('click',hi);
+                function hi(e){
+                    //alert("Hello");
+                    console.log(e.target.id);
+                    
+                    if(e.target.id = "one"){
+                        console.log('One');  
+                    } else{
+                        console.log('Two');  
+                    }
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+        <div id="result2"></div>
+        <button id="one">One</button>
+        <button id="two">Two</button>
+    </body>
+</html>

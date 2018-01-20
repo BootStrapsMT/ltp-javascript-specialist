@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                document.getElementById('bonus').addEventListener('click', getBonus);
+    
+                function getBonus(e){
+                    
+                    var sales = document.getElementById('salesTotal').value;
+                    console.log(sales);                    
+                    var bonusPercent;
+                    
+                    if(sales < 10000){
+                        bonusPercent = .005;
+                    }
+                    if(sales < 20000){
+                        bonusPercent = .01;
+                    }
+                    if(sales < 30000){
+                        bonusPercent = .015;
+                    }
+                    if(sales < 40000){
+                        bonusPercent = .02;
+                    }
+                                    
+                    console.log(bonusPercent);
+                    var bonusAmount = sales * bonusPercent;
+                    console.log(bonusAmount);
+                    document.getElementById('result').innerHTML = ("Bonues: " + bonusAmount);                  
+              
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+       <label for="salesTotal">Sales Total</label>
+       <input type="number" id="salesTotal" />
+        <button id="bonus">Bonus</button>
+        <div id="result"></div>
+    </body>
+</html>

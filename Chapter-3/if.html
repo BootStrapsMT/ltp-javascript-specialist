@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                var age = 19;
+                var citzen = true;
+                
+                if(age >= 18 && citzen){
+                document.getElementById('result').innerHTML = ("Vote Here!")   
+                }
+                
+                var age2 = 17;
+                var PP = true;
+                
+                if(age2 >= 17 || PP){
+                    document.getElementById('result2').innerHTML = ("Movie!")    
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+        <div id="result2"></div>
+    </body>
+</html>
