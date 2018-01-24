@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            
+             
+            var clicker;
+            window.onload = function(){ 
+                
+                alert("Hi");
+                clicker = document.getElementById('greet');
+                clicker.onclick = function(){
+                    alert("Hi!");                    
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+        <button id="greet">Click me!</button>
+    </body>
+</html>

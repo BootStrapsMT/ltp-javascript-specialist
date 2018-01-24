@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                
+                document.getElementById('calc').addEventListener('click', getInerest);
+                
+                function getInerest(e){
+                    var amount = parseFloat(document.getElementById('amount').value);
+                    var term = parseFloat(document.getElementById('term').value);
+                    var interest = parseFloat(document.getElementById('interest').value);
+                    
+                    console.log(amount);
+                    console.log(term);
+                    console.log(interest);
+                    
+                    var x = 0;
+                    var out = "";
+                    
+                    while(x < term){
+                        amount = amount + (amount * (interest/12/100));
+                        console.log(Math.floor(amount));
+                        out += "Mouth " + (x + 1) + " $" + (Math.floor(amount));
+                        out += "<br />";
+                        x++;
+                    }
+                    document.getElementById('result').innerHTML = out;
+                    
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <label for="amount">Amouint Invested:</label>
+        <input type="number" id="amount" /><br />
+        <label for="term">How many Mouths:</label>
+        <input type="number" id="term" /><br />
+        <label for="interest">Insterest Rate:</label>
+        <input type="number" id="interest" /><br />
+        <button id="calc">Get Insterest</button>        
+        <div id="result"></div>
+    </body>
+</html>

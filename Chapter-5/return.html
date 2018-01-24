@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            
+            function calAdd(a,b){
+                var c = a + b;
+                return c;
+                
+            }
+            
+            function calSub(a,b){
+                var c = a - b;
+                return c;
+                
+            }
+            
+            function calMul(a,b){
+                var c = a * b;
+                return c;
+                
+            }
+                
+            window.onload = function(){ 
+                var x = 524;
+                var y = 245.1;
+                
+                var sum = calAdd(x,y);
+                //document.getElementById('result')
+                document.getElementById('result').innerHTML = sum;
+                document.getElementById('result').innerHTML += calMul(x,y);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+        <button id="greet">Click me!</button>
+    </body>
+</html>

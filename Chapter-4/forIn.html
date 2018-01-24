@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                
+                var myOdject = {a: 93, b: 73, c: 56, d: 88, e: 70};
+                var myKeys = [];
+                var i = 0;
+                
+                for(myKeys[i++] in myOdject){
+                    console.log(myKeys);
+                    
+                }
+                
+                //document.getElementById('result') .innerHTML +=  x + "<br />";
+                     
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

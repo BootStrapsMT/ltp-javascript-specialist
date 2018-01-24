@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                var counter = 0;
+                
+                
+                do{
+                    document.getElementById('result') .innerHTML += "<br />" + counter;
+                    console.log(counter);
+                    counter++;
+                } while(counter < 15);                
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>
