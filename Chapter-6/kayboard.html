@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+          
+            window.onload = function(){ 
+                var textbox = document.getElementById('text1');
+                textbox.onkeypress = function(e){
+                    console.log(e);
+                    if(e.key == "E" && e.shiftKey == true){
+                       textbox.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label for="text1">Type Here:</label>
+        <input type="text" id="text1" />
+        <div id="result"></div>
+    </body>
+</html>

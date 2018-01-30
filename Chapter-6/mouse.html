@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <style>
+            #target{
+                width: 400px;
+                height: 400px;
+                background-color: crimson;
+            }
+        </style>
+        <script>
+            var target;
+            window.onload = function(){ 
+                target = document.getElementById('target');
+                result = document.getElementById('result');
+                target.onclick = function(){
+                    result.innerHTML = "Click"
+                }
+                
+                target.addEventListener('mouseout', function(){
+                    result.innerHTML = "mouseout"
+                });
+                
+                target.addEventListener('mouseover', function(e){
+                    result.innerHTML = "MouseOver"
+                    console.log(e);
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div id="target"></div>
+        <div id="result"></div>
+    </body>
+</html>

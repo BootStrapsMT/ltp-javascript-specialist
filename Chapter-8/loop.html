@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                var cars =["Ford","Pinto","Jeep","BWM"];
+                //console.log(cars.length);
+                var ticks = cars.length;
+                var x = 0;
+                var out = "";
+                
+                while(x < ticks){
+                    out += cars[x];
+                    out += "<br />";
+                    x++;
+                }
+                
+                document.getElementById('result').innerHTML = out;
+                
+                var cities = ["Chicago","LA","Nwe York","Denver"];
+                
+                for(var z = 0; z < cities.length; z++){
+                    out += cities[z];
+                    out += "<br />";
+                }
+                
+                document.getElementById('result').innerHTML = out;
+
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

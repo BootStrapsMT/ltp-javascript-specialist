@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){                 
+                document.getElementById('button1').addEventListener('click', getAlert);
+            }
+            
+            function getAlert(e){
+                //alert('Hello');
+                //alert(e.target.id);
+                var get = confirm('Lrft or Right');
+                alert(get);
+                
+                if(get){
+                    console.log('truy')   
+                } else {
+                    console.log('falsey')   
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+       <button id="button1">:)</button>
+        <div id="result"></div>
+    </body>
+</html>

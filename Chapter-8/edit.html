@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                teams =["a","b","c","d"];
+                console.log(teams);
+                
+                teams2 = new Array("a","b","c","d");
+                console.log(teams2);
+                
+                document.getElementById('result').innerHTML = teams[2];
+                document.getElementById('result').innerHTML += teams2;
+                
+                var happyArray = [];
+                happyArray[0] = "ant";
+                happyArray[1] = "snail";
+                happyArray[2] = "beddle";
+                happyArray[3] = "bee";
+                
+                document.getElementById('result').innerHTML += happyArray;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

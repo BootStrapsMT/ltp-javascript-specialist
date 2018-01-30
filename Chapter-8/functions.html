@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                var years =[1998,1999,2000,2001,2002,2003,2004];                
+                years.push(2005);
+                years.push(2006);
+                years.pop();
+                years.forEach(getArray);
+                console.log(years.indexOf(2002));
+                
+                
+                names =["Fred", "Tom", "Mark", "Mike"];
+                console.log(names.sort());
+                
+            }
+            
+            function getArray (item, index){                    
+                document.getElementById('result').innerHTML += index + "|" + item + "<br />";                
+            }
+            
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>
