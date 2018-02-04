@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <style>
+            .green{
+                color: darkgreen;
+                font-weight: bold;
+            }
+            .purple{
+                color: yellowgreen;
+                font-weight: normal;
+                text-decoration: underline;
+            }
+        </style>
+        <script>
+            window.onload = function(){ 
+                var content = document.getElementById('main');
+                //content.setAttribute('class', 'purple');
+                content.style.backgroundColor = "gray";
+                
+                
+                
+                document.getElementById('main').innerHTML += "Hi";
+                console.log(document.getElementById("main"));
+            }
+        </script>
+    </head>
+    <body>
+       <h1>Dom Things</h1>
+        <div id="main">
+            <p>Donec id nisl in elit faucibus blandit.</p>
+            <p>Aliquam euismod ornare odio, at fringilla risus condimentum ut.</p>
+        </div>
+    </body>
+</html>

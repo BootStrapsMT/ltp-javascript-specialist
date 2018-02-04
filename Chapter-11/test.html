@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                //var pattern = /^(.tv|.com)/; ^ is not eqaul
+                //var pattern = /^(.tv|.com)/; | is or
+                //var pattern = /[0123456789]/; test for mumbers and [2-6]
+                var pattern = /[O]/i; i is case insentive
+                
+                console.log(pattern.test("google.com"))
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

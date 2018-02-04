@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                var d = new Date(1905,00,5, 12,01);
+                var c = new Date();
+                var k = Date.now() - (365 * 24 * 60 * 60);
+           
+                var out = "";
+                out += "Custom:  " + d;
+                out += "<br />Day of the month: " + d.getDate();
+                out += "<br />Year:  " + d.getFullYear();
+                out += "<br />Time:  " + d.getHours() + ":" +  d.getMinutes();
+                document.getElementById('result').innerHTML = out;
+                document.getElementById('result').innerHTML += Date.now();
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                var result = document.getElementById('result');
+                var elements = document.getElementsByTagName('p');
+                var x = document.getElementsByClassName('last');
+                
+                result.innerHTML = elements;
+                console.log(elements[1]);
+                console.log(x[0]);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Dom Things</h1>
+        <p>Donec id nisl in elit faucibus blandit.</p>
+        <p class="last">Pellentesque posuere, enim quis pulvinar ultrices.</p>        
+        <div id="result"></div>
+    </body>
+</html>

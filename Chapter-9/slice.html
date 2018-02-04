@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic HTML Document</title>
+        <script>
+            window.onload = function(){ 
+                var string1 = "Donec quis ligula sit amet ex mattis sodales";
+                
+                var m = string1.slice(7,18);
+                console.log(m);
+                
+                var csv = "thing1,thing2,thing3,thing4,thing5";
+                var csvArray = csv.split(",");
+                
+                for(var x=0; x < csvArray.length; x++){
+                    console.log(csvArray[x]);    
+                }
+                
+                console.log(string1.substr(5,2));
+                
+                
+                //var g = string1.search("sit");
+                //console.log(g);
+                
+                //var h = string1.replace("ex", "un");
+                //console.log(h);
+                
+                //for(var x=0; x < string1.length; x++){
+                    //console.log(string1.charAt(x));    
+                //}
+                
+                //var n = string1.includes("s");
+                //console.log(n);
+                
+                //console.log("Index x: " + string1.indexOf('q'));
+                
+            }
+        </script>
+    </head>
+    <body>
+        <div id="result"></div>
+    </body>
+</html>
