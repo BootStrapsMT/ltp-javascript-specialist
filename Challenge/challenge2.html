@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Basic HTML Document</title>
+    <script>
+        window.onload = function() {
+            var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            //console.log(alphabet);
+            var plainText = "howdoyoucomfortajavascriptbug";
+            var cipherText = "wmsamlqmjcgr";
+            var alphabetCipher = []
+            for(var i = 0; i < alphabet.length; i++){
+                alphabetCipher[i-2] = alphabet[i];
+            }
+            console.log(alphabetCipher);
+            
+            function encrypt(plainText, alphabet,alphabetCipher) {
+                var plainTextEdited = plainText;
+                var plainTextEdited1;
+
+                for (var x = 0; x < plainText.length +2; x++) {
+
+                    var letterOfPlainRaw = plainText.charAt(x);
+                    console.log("letterOfPlainRaw: " + letterOfPlainRaw);
+
+                    var numberOfPlainRaw = alphabet.indexOf(letterOfPlainRaw);
+                    console.log("numberOfPlainRaw: " + numberOfPlainRaw);   
+                                        
+                    var letterOfPlainNew = alphabetCipher[numberOfPlainRaw];
+                    console.log("letterOfPlainNew: " + letterOfPlainNew);
+
+             
+                    //console.log("letterOfPlainNew: " + letterOfPlainNew);
+
+                    plainTextEdited = plainTextEdited.replace(letterOfPlainRaw, letterOfPlainNew);
+
+                    console.log(plainTextEdited);
+
+
+                    //console.log(plainTextEdited.replace(letterOfPlainRaw,letterOfPlainNew));
+                    //console.log(plainTextEdited1);
+                }
+                console.log(plainTextEdited1);
+            }
+
+            function decrypt(cipherText, alphabet) {
+
+            }
+
+            console.log(encrypt(plainText, alphabet, alphabetCipher));
+            //console.log(decrypt(cipherText, alphabet));
+        }
+    </script>
+</head>
+
+<body>
+    <div id="result"></div>
+</body>
+</html>
