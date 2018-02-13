@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON</title>
+    
+    <script>
+        var xmlhttp;
+        
+        window.onload=function()
+        {
+            navigator.geolocation.getCurrentPosition(success, fail);
+        }      
+        function success(position){
+            var lat = position.coords.latitude;
+            var long = position.coords.longitude;
+            document.getElementById('lat').innerHTML = lat;
+            document.getElementById('long').innerHTML = long;
+            
+    
+        }
+        
+        function fail(e)
+        {
+            alert(e.message);
+        }
+    
+    </script>
+</head>
+<body>
+    <p>Lat: <output id="lat"></output></p>
+    <p>Long: <output id="long"></output></p>
+    <div id="results"></div>
+</body>
+</html>

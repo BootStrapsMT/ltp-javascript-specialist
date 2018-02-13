@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON</title>
+    <script src="key.js"></script>
+    <script>
+        var xmlhttp;
+        
+        window.onload=function()
+        {
+            navigator.geolocation.getCurrentPosition(success, fail);
+        }      
+        function success(position){
+            var lat = position.coords.latitude;
+            var long = position.coords.longitude;
+            console.log(lat + " - " + long)
+            getPositionInfo(lat,long);
+        }
+        
+        function getPositionInfo(lat,long){
+            var url ="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long;
+            url += "&radius=5000&types=food&key=" + key;
+            console.log(url);
+            xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = processPlaces;
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+        
+        function processPlaces(){
+            var out=""; 
+            if(xmlhttp.readyState==4)
+             {
+                 var jsonResponse = JSON.parse(xmlhttp.responseText);
+                 var places = jsonResponse.results;
+                 console.log(places);
+                 
+                 for(var x = 0; x < places.length; x++){
+                    var name = places[x].name;
+                    var address = places[x].vicinity;
+                    var rating = places[x].rating;
+                     
+                    out += "<h2>" + name + "</h2><p>" + address + "<br/>";
+                    out += "Rating: " + rating + "</p>";
+                 }
+                 document.getElementById('results').innerHTML = out;
+             }
+        }
+        
+        function fail(e)
+        {
+            alert(e.message);
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>Local Smell</h1>
+    <div id="results"></div>
+</body>
+</html>
